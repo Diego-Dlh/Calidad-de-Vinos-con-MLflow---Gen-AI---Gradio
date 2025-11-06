@@ -1,2 +1,2 @@
 import ollama
-print(ollama.generate(model="llama2", prompt="Hola"))
+print(ollama.generate(model="phi3:mini", prompt="Hola"))

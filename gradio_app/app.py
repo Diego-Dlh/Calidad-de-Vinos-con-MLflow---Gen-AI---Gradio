@@ -19,7 +19,11 @@ def predict_and_explain(*inputs):
     return f"Calidad predicha: {pred:.2f}", explicacion
 
 inputs = [gr.Number(label=col) for col in columns]
-outputs = [gr.Textbox(label="Predicción de Calidad"), gr.Textbox(label="Explicación Generativa")]
+
+outputs = [
+    gr.Textbox(label="Predicción de Calidad"), 
+    gr.Textbox(label="Explicación Generativa", lines=15, max_lines=30, interactive=False)
+]
 
 interface = gr.Interface(
     fn=predict_and_explain,
