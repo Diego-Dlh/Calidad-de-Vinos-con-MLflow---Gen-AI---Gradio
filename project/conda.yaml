@@ -1,0 +1,11 @@
+name: vinoenv
+channels:
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+      - mlflow
+      - pandas
+      - scikit-learn
+      - matplotlib

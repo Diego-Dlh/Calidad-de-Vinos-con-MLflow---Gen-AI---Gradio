@@ -1,0 +1,7 @@
+name: PrediccionVino
+conda_env: conda.yaml
+entry_points:
+  main:
+    parameters:
+      data: data/winequality-white.csv
+    command: "python train.py --data {data}"
