@@ -1,7 +1,8 @@
 import ollama
 
 def explica_prediccion(entrada, prediccion):
-    prompt = f"El vino con atributos: {entrada} tiene una calidad predicha de {prediccion}. Explica brevemente por qué según tendencia de datos químicos."
+    entrada_str = ", ".join([str(x) for x in entrada])
+    prompt = f"El vino con atributos: {entrada_str} tiene una calidad predicha de {prediccion:.2f}. Explica brevemente por qué según tendencia de datos químicos."
     respuesta = ollama.generate(
         model="llama2",
         prompt=prompt
